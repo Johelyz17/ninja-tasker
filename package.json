@@ -1,0 +1,29 @@
+{
+  "name": "ninja-tasker",
+  "version": "1.0.0",
+  "description": "* IDEA ---------------------- ** Web Designer / UI Designer - create a wireframe  - create a mockup / htmls / framework - create html page of the mockup - style the html page",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Johelyz17/ninja-tasker.git"
+  },
+  "author": "johelyz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Johelyz17/ninja-tasker/issues"
+  },
+  "homepage": "https://github.com/Johelyz17/ninja-tasker#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.4",
+    "prettier": "^1.19.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1"
+  }
+}
