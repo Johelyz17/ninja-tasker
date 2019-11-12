@@ -16,8 +16,8 @@
 
 ** tools
 - nodemon
-- prettier
 - colorize
+- prettier
 - scripts
 
 
@@ -29,13 +29,12 @@
 - create a GET route in express server 
 - GET route should render the html page created from mock up 
 - set up express with a view engine to render html files
-
-** Front-end
 - add styles to the html page
-- set up express server to handle <link> tag static file request
 - use a data structure LIST(array) to store to do items
 - add dummy data to LIST
 - pass the LIST to the html page created from mock up
+
+** Front-end
 - display each item in the LIST passed to the html page
 
 
