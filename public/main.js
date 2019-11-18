@@ -5,7 +5,7 @@ const listItem = document.querySelector("ul");
  
 listItem.addEventListener("click", function(event) {
     console.log(event.target);
-    fetch("/delte/" + event.target.id, {method: "delete"}).then(function(res) {
+    fetch("/delete/" + event.target.id, {method: "delete"}).then(function(res) {
             res.json();
         })
         .then( function() {
