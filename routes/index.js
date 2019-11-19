@@ -1,6 +1,7 @@
 const express = require("express");
-const db = require("../models");
+const db = require("../models/index");
 const routes = express.Router();
+const passport = require("../config/passport")
 
 // let list = ["code and watch anime", "Slackline tonight"];
 
@@ -34,8 +35,37 @@ routes.delete("/delete/:index", function(req, res) {
         // console.log(results);
         res.redirect("/home");
         res.json(results);
-    })
-    
+    });
 });
 
+// ROUTES: users
+
+// GET login
+routes.get("/user/login", function(req, res) {
+    res.render("login.ejs");
+});
+
+// POST login
+routes.post(
+    "/user/login",
+  passport.authenticate("local", {
+    successRedirect: "/home",
+    failureRedirect: "/user/login"
+ })
+);
+
+// GET signup
+routes.post(
+    "/user/signup",
+    passport.authenticate("local-signup",{ 
+     successRedirect: "/home",
+     failureRedirect: "/user/signup"
+    })
+);
+    
+
+// POST signup
+routes.get("/user/signup", function(req, res) {
+    console.log("hitting post signup");
+});
 module.exports = routes;

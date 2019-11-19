@@ -3,6 +3,8 @@ const express= require("express")
 const bodyParser = require("body-parser");
 const db = require("./models/index.js");
 const routes = require("./routes");
+const passport = require("./config/passport");
+const session = require("express-session");
 
 // starting express app
 const app = express();
@@ -14,6 +16,11 @@ app.set("view engine", "ejs");
 app.use(express.static("./public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(
+    session({secret:"Cohort orlando", resave: true, saveUnitialized: true})
+);
+app.use(passport.initialize());
+app.use(passport.session());
 
 // let list = ["code and watch anime", "Slackline tonight"];
 
